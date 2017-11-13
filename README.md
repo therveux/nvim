@@ -1,6 +1,6 @@
 # My neovim configuration
 
-Just a useless git repository to keep my nvim configuration. 
+Just an useless git repository to keep my nvim configuration. 
 
 ## Getting Started
 
