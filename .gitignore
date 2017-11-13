@@ -3,3 +3,4 @@
 # But these files ...
 !.gitignore
 !init.vim
+!README.md
