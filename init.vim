@@ -53,7 +53,16 @@ colorscheme one
 set background=dark
 
 filetype plugin indent on
-syntax on
-
+" To color code
+syntax on 
+" Enable line number
 set nu
 set encoding=utf-8
+" Show vi command while typing 
+set showcmd
+" Ignore case for research
+set ignorecase
+" Enable mouse in normal mode
+set mouse=a
+" To save the changes in files automatically
+set autowrite
