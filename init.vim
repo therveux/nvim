@@ -66,3 +66,5 @@ set ignorecase
 set mouse=a
 " To save the changes in files automatically
 set autowrite
+set shiftwidth=4
+set tabstop=4
