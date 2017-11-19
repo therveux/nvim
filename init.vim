@@ -15,6 +15,9 @@ Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
     " Allow tab to manually complete
     inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
 
+" TOML syntax
+Plug 'cespare/vim-toml'
+
 " Appearance
 Plug 'vim-airline/vim-airline'
     let g:airline_powerline_fonts = 1
