@@ -7,11 +7,6 @@ Plug 'jiangmiao/auto-pairs'
 
 " History
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-   let g:fzf_action = {
-	      \ 'ctrl-t': 'tab split',
-	      \ 'ctrl-x': 'split',
-	      \ 'ctrl-v': 'vsplit' }
-   nnoremap <silent> <c-x> :FZF<cr>
 
 " Automatically adjusts shiftwidth and expandtab based on current file
 Plug 'tpope/vim-sleuth'
