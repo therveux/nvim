@@ -12,6 +12,7 @@ let g:fzf_action = {
       \ 'ctrl-x': 'split',
       \ 'ctrl-v': 'vsplit' }
 nnoremap <silent> <c-x> :FZF<cr>
+
 " Automatically adjusts shiftwidth and expandtab based on current file
 Plug 'tpope/vim-sleuth'
 
