@@ -7,28 +7,30 @@ Plug 'jiangmiao/auto-pairs'
 
 " History
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-   let g:fzf_action = {
-	      \ 'ctrl-t': 'tab split',
-	      \ 'ctrl-x': 'split',
-	      \ 'ctrl-v': 'vsplit' }
-   nnoremap <silent> <c-x> :FZF<cr>
-
+let g:fzf_action = {
+      \ 'ctrl-t': 'tab split',
+      \ 'ctrl-x': 'split',
+      \ 'ctrl-v': 'vsplit' }
+nnoremap <silent> <c-x> :FZF<cr>
 " Automatically adjusts shiftwidth and expandtab based on current file
 Plug 'tpope/vim-sleuth'
 
 " Auto-Completion
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-    " Use deoplete
-    let g:deoplete#enable_at_startup = 1
-    " Allow tab to manually complete
-    inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
+" Use deoplete
+let g:deoplete#enable_at_startup = 1
+" Allow tab to manually complete
+inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
+Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+nnoremap <silent> <leader>f :NERDTreeToggle<cr>
+let NERDTreeMinimalUI=1
 
 " TOML syntax
 Plug 'cespare/vim-toml'
 
 " Appearance
 Plug 'vim-airline/vim-airline'
-    let g:airline_powerline_fonts = 1
+let g:airline_powerline_fonts = 1
 Plug 'vim-airline/vim-airline-themes'
 
 " Javascript
@@ -39,7 +41,7 @@ au FileType javascript setlocal shiftwidth=2 tabstop=2 expandtab
 
 " Colorschemes
 Plug 'rakr/vim-one'
-    autocmd Colorscheme one let g:airline_theme='one'
+autocmd Colorscheme one let g:airline_theme='one'
 
 call plug#end()
 
@@ -49,8 +51,8 @@ call plug#end()
 "(see < http://sunaku.github.io/tmux-24bit-color.html#usage > for more information.)
 if (empty($TMUX))
   if (has("nvim"))
-  "For Neovim 0.1.3 and 0.1.4 < https://github.com/neovim/neovim/pull/2198 >
-  let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+    "For Neovim 0.1.3 and 0.1.4 < https://github.com/neovim/neovim/pull/2198 >
+    let $NVIM_TUI_ENABLE_TRUE_COLOR=1
   endif
   "For Neovim > 0.1.5 and Vim > patch 7.4.1799 < https://github.com/vim/vim/commit/61be73bb0f965a895bfb064ea3e55476ac175162 >
   "Based on Vim patch 7.4.1770 (`guicolors` option) < https://github.com/vim/vim/commit/8a633e3427b47286869aa4b96f2bfc1fe65b25cd >
