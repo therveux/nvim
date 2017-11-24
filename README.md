@@ -5,9 +5,10 @@ Just an useless git repository to keep my nvim configuration.
 ## Getting Started
 
 You can follow this tutorial to get neovim - [Tutorial](https://www.linode.com/docs/tools-reference/how-to-install-neovim-and-plugins-with-vim-plug)
+
 Or this one - [Tutorial-PPA](https://github.com/neovim/neovim/wiki/Installing-Neovim#install-from-package)
 
-## Installation
+## Installation
 
 Follow the instructions related to your distrib in order to have Neovim package
 
