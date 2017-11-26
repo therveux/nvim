@@ -1,5 +1,5 @@
-" let mapleader = ','
-" let maplocalleader = ','
+ let mapleader = ','
+ let maplocalleader = ','
 
 " curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim 
 
@@ -18,14 +18,18 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 				\ 'ctrl-x': 'split',
 				\ 'ctrl-v': 'vsplit' }
 	nnoremap <silent> <c-x> :FZF<cr>
+
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 	let g:deoplete#enable_at_startup = 1
 	let g:deoplete#omni#input_patterns = {}
 	autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
 	inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
+
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 	nnoremap <silent> <c-n> :NERDTreeToggle<cr>
 	let NERDTreeMinimalUI=1
+
+Plug 'Xuyuanp/nerdtree-git-plugin'
 
 " TOML syntax
 Plug 'cespare/vim-toml'
@@ -37,6 +41,10 @@ Plug 'chr4/nginx.vim'
 Plug 'vim-airline/vim-airline'
 let g:airline_powerline_fonts = 1
 Plug 'vim-airline/vim-airline-themes'
+
+Plug 'airblade/vim-gitgutter'
+	nnoremap <silent> <leader>d :GitGutterLineHighlightsToggle<cr>
+
 
 " Javascript
 Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
@@ -90,4 +98,4 @@ set tabstop=4
 inoremap <c-u> <esc> viwgUi
 inoremap <c-y> <esc> ddi
 inoremap <c-d> <esc> yypi
-
+inoremap aa <esc> A
