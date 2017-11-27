@@ -37,6 +37,12 @@ Plug 'cespare/vim-toml'
 " nginx
 Plug 'chr4/nginx.vim'
 
+" gitignore
+Plug 'gisphm/vim-gitignore'
+
+" markdown
+Plug 'plasticboy/vim-markdown'
+
 " Appearance
 Plug 'vim-airline/vim-airline'
 let g:airline_powerline_fonts = 1
