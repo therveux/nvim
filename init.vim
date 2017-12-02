@@ -1,16 +1,28 @@
- let mapleader = ','
- let maplocalleader = ','
+let mapleader=','
+let maplocalleader=','
 
-" curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim 
-
+" curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 call plug#begin('~/.local/share/nvim/plugged')
 
-Plug 'w0rp/ale', { 'do': 'npm install -g standard' }
+Plug 'w0rp/ale'
+
+Plug 'majutsushi/tagbar'
+
 Plug 'jiangmiao/auto-pairs'
 
+Plug 'airblade/vim-rooter'
 
-" Automatically adjusts shiftwidth and expandtab based on current file
+"Plug 'neomake/neomake'
+"	nnoremap <silent> <leader>m :Neomake<cr>
+Plug 'tpope/vim-surround'
+
+Plug 'tpope/vim-commentary'
+
 Plug 'tpope/vim-sleuth'
+
+Plug 'kassio/neoterm'
+	nnoremap <silent> <leader>tc :call neoterm#close()<cr>
+	command! -nargs=+ Tg :T git <args>
 
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 	let g:fzf_action = {
@@ -26,52 +38,39 @@ Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 	inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
 
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
-	nnoremap <silent> <c-n> :NERDTreeToggle<cr>
+	nnoremap <silent> <leader>f :NERDTreeToggle<cr>
 	let NERDTreeMinimalUI=1
 
 Plug 'Xuyuanp/nerdtree-git-plugin'
 
-" TOML syntax
-Plug 'cespare/vim-toml'
-
-" nginx
-Plug 'chr4/nginx.vim'
-
-" gitignore
-Plug 'gisphm/vim-gitignore'
-
-" markdown
-Plug 'plasticboy/vim-markdown'
-
-" Appearance
+" appearance
 Plug 'vim-airline/vim-airline'
-let g:airline_powerline_fonts = 1
+	let g:airline_powerline_fonts = 1
 Plug 'vim-airline/vim-airline-themes'
 
 Plug 'airblade/vim-gitgutter'
 	nnoremap <silent> <leader>d :GitGutterLineHighlightsToggle<cr>
 
-
-" Javascript
-Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
+"Plug 'rliang/nvim-pygtk3', {'do': 'make install'}
+"
+" javascript
+Plug 'carlitux/deoplete-ternjs', { 'do': 'sudo npm install -g tern' }
+	autocmd FileType javascript nnoremap <silent> <buffer> <leader>gd :TernDef<CR>
 Plug 'nikvdp/ejs-syntax'
 Plug 'pangloss/vim-javascript'
-au FileType javascript setlocal shiftwidth=2 tabstop=2 expandtab
 
-" Colorschemes
+" nginx
+Plug 'chr4/nginx.vim'
+
 Plug 'rakr/vim-one'
-autocmd Colorscheme one let g:airline_theme='one'
+	autocmd ColorScheme one let g:airline_theme='one'
 
 call plug#end()
 
-"Credit joshdick
-"Use 24-bit (true-color) mode in Vim/Neovim when outside tmux.
-"If you're using tmux version 2.2 or later, you can remove the outermost $TMUX check and use tmux's 24-bit color support
-"(see < http://sunaku.github.io/tmux-24bit-color.html#usage > for more information.)
 if (empty($TMUX))
   if (has("nvim"))
-    "For Neovim 0.1.3 and 0.1.4 < https://github.com/neovim/neovim/pull/2198 >
-    let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+  "For Neovim 0.1.3 and 0.1.4 < https://github.com/neovim/neovim/pull/2198 >
+  let $NVIM_TUI_ENABLE_TRUE_COLOR=1
   endif
   "For Neovim > 0.1.5 and Vim > patch 7.4.1799 < https://github.com/vim/vim/commit/61be73bb0f965a895bfb064ea3e55476ac175162 >
   "Based on Vim patch 7.4.1770 (`guicolors` option) < https://github.com/vim/vim/commit/8a633e3427b47286869aa4b96f2bfc1fe65b25cd >
