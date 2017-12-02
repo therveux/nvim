@@ -62,6 +62,15 @@ Plug 'pangloss/vim-javascript'
 " nginx
 Plug 'chr4/nginx.vim'
 
+" TOML syntax
+Plug 'cespare/vim-toml'
+
+" gitignore
+Plug 'gisphm/vim-gitignore'
+
+" markdown
+Plug 'plasticboy/vim-markdown'
+
 Plug 'rakr/vim-one'
 	autocmd ColorScheme one let g:airline_theme='one'
 
