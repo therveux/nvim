@@ -1,4 +1,3 @@
-
 let mapleader=','
 let maplocalleader=','
 
@@ -36,6 +35,7 @@ Plug 'janko-m/vim-test'
 	nmap <silent> <leader>l :TestLast<CR>
 	nmap <silent> <leader>g :TestVisit<CR>
 	let test#strategy = 'neovim'
+
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 	let g:fzf_action = {
 				\ 'ctrl-t': 'tab split',
@@ -68,8 +68,6 @@ Plug 'carlitux/deoplete-ternjs', { 'do': 'sudo npm install -g tern' }
 Plug 'nikvdp/ejs-syntax'
 Plug 'pangloss/vim-javascript'
 
-nnoremap ,jj <silent> :%!python -m json.tool<cr>
-
 " python
 Plug 'zchee/deoplete-jedi'
 
@@ -96,9 +94,6 @@ augroup tex
 	autocmd BufRead *.tex call pencil#init({'wrap': 'soft'})
 augroup END
 
-" nginx
-Plug 'chr4/nginx.vim'
-
 " c
 Plug 'tweekmonster/deoplete-clang2'
 " Plug 'zchee/deoplete-clang'
@@ -112,6 +107,18 @@ Plug 'freeo/vim-kalisi'
 Plug 'mhinz/vim-janah'
 	autocmd ColorScheme janah highlight Normal ctermbg=235
 	autocmd ColorScheme janah let g:airline_theme='bubblegum'
+" nginx
+Plug 'chr4/nginx.vim'
+
+" TOML syntax
+Plug 'cespare/vim-toml'
+
+" gitignore
+Plug 'gisphm/vim-gitignore'
+
+" markdown
+Plug 'plasticboy/vim-markdown'
+
 Plug 'rakr/vim-one'
 	autocmd ColorScheme one let g:airline_theme='one'
 
