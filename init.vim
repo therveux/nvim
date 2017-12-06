@@ -117,7 +117,7 @@ Plug 'cespare/vim-toml'
 Plug 'gisphm/vim-gitignore'
 
 " markdown
-Plug 'plasticboy/vim-markdown'
+"Plug 'plasticboy/vim-markdown'
 
 Plug 'rakr/vim-one'
 	autocmd ColorScheme one let g:airline_theme='one'
@@ -162,6 +162,7 @@ set backspace=indent,eol,start
 set wildmenu
 set incsearch
 set shortmess+=I
+set showcmd
 
 inoremap <c-u> <esc> viwgUi
 inoremap <c-y> <esc> ddi
