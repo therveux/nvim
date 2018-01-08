@@ -8,6 +8,9 @@ call plug#begin('~/.local/share/nvim/plugged')
 " Plug 'critiqjo/lldb.nvim'
 
 Plug 'w0rp/ale'
+let g:ale_linters = {
+\   'javascript': ['standard'],
+\}
 
 Plug 'majutsushi/tagbar'
 
@@ -67,6 +70,7 @@ Plug 'carlitux/deoplete-ternjs', { 'do': 'sudo npm install -g tern' }
 	autocmd FileType javascript nnoremap <silent> <buffer> <leader>gd :TernDef<CR>
 Plug 'nikvdp/ejs-syntax'
 Plug 'pangloss/vim-javascript'
+au FileType javascript setlocal shiftwidth=2 tabstop=2 expandtab
 
 " python
 Plug 'zchee/deoplete-jedi'
@@ -147,20 +151,20 @@ set nu
 set laststatus=2
 set noshowmode
 set encoding=utf-8
-set hlsearch
-set autowrite
-set termencoding=utf-8
+" set hlsearch
+" set autowrite
+" set termencoding=utf-8
 set mouse=a
 set shiftwidth=4
 set tabstop=4
 set ignorecase
 set smartcase
-set scrolloff=10
-set fileformats=unix,dos,mac
-set completeopt-=preview
-set backspace=indent,eol,start
-set wildmenu
-set incsearch
+" set scrolloff=10
+" set fileformats=unix,dos,mac
+" set completeopt-=preview
+" set backspace=indent,eol,start
+" set wildmenu
+" set incsearch
 set shortmess+=I
 set showcmd
 
