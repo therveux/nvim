@@ -10,6 +10,7 @@ call plug#begin('~/.local/share/nvim/plugged')
 Plug 'w0rp/ale'
 let g:ale_linters = {
 \   'javascript': ['standard'],
+\   'typescript': ['standard']
 \}
 
 Plug 'majutsushi/tagbar'
@@ -172,7 +173,15 @@ inoremap <c-u> <esc> viwgUi
 inoremap <c-y> <esc> ddi
 inoremap <c-d> <esc> yypi
 inoremap aa <esc> A
+" Rebind 'p' key to pasting under current line
+nmap p :pu<CR>
 
 " Reopen at last position if possible
 au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
   \| exe "normal! g'\"" | endif
+
+augroup docker
+  autocmd!
+  autocmd BufNewFile,BufRead Dockerfile.* set filetype=dockerfile
+  autocmd BufNewFile,BufRead Dockerfile.* set syntax=dockerfile
+augroup END
