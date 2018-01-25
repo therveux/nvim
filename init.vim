@@ -174,7 +174,7 @@ inoremap <c-y> <esc> ddi
 inoremap <c-d> <esc> yypi
 inoremap aa <esc> A
 " Rebind 'p' key to pasting under current line
-nmap p :pu<CR>
+nnoremap <c-p> :pu<CR>
 
 " Reopen at last position if possible
 au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
