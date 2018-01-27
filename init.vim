@@ -152,20 +152,20 @@ set nu
 set laststatus=2
 set noshowmode
 set encoding=utf-8
-" set hlsearch
-" set autowrite
-" set termencoding=utf-8
+set hlsearch
+set autowrite
+set termencoding=utf-8
 set mouse=a
 set shiftwidth=4
 set tabstop=4
 set ignorecase
 set smartcase
-" set scrolloff=10
-" set fileformats=unix,dos,mac
-" set completeopt-=preview
-" set backspace=indent,eol,start
-" set wildmenu
-" set incsearch
+set scrolloff=10
+set fileformats=unix,dos,mac
+set completeopt-=preview
+set backspace=indent,eol,start
+set wildmenu
+set incsearch
 set shortmess+=I
 set showcmd
 
@@ -173,7 +173,7 @@ inoremap <c-u> <esc> viwgUi
 inoremap <c-y> <esc> ddi
 inoremap <c-d> <esc> yypi
 inoremap aa <esc> A
-" Rebind 'p' key to pasting under current line
+" Rebind 'p' keystroke to pasting under current line
 nnoremap <c-p> :pu<CR>
 
 " Reopen at last position if possible
