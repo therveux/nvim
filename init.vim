@@ -127,6 +127,9 @@ Plug 'plasticboy/vim-markdown'
 " html
 Plug 'mattn/emmet-vim'
 
+" Enable command on vim as Rename, Mkdir, Delete, Sudo  https://github.com/tpope/vim-eunuch
+Plug 'tpope/vim-eunuch'
+
 Plug 'rakr/vim-one'
 	autocmd ColorScheme one let g:airline_theme='one'
 
